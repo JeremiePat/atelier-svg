@@ -1,0 +1,18 @@
+// Style de la grille par defaut.
+// ----------------------------------------------------------------------------
+// Pour masquer la grille, décommentez simplementle "display: none"
+#grid {
+  // display: none;
+  pointer-events: none;
+
+  fill: none;
+  stroke: rgba(0,0,0,.4);
+
+  &Small {
+    stroke-width: 0.1px;
+  }
+
+  &Large {
+    stroke-width: 0.4px;
+  }
+}

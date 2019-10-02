@@ -1,0 +1,21 @@
+#heart {
+  fill: maroon;
+
+  stroke: maroon;
+  stroke-linejoin: round;
+  stroke-width: 4.7px;
+}
+
+#left {
+  clip-path: url(#breakLeft);
+
+  transform-origin: 50px 90px;
+  transform: rotate(-3deg);
+}
+
+#right {
+  clip-path: url(#breakRight);
+
+  transform-origin: 50px 90px;
+  transform: rotate(4deg);
+}
