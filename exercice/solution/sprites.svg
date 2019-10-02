@@ -1,0 +1,110 @@
+<svg viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <!--
+    ATTENTION:
+    Pensez toujours à bien inliner vos styles si vos images SVG doivent êtres
+    utilisés dans un context d'image (Background CSS, balise HTML <img>, balise
+    SVG <image>, etc). En effet les navigteurs refusent de charger des
+    ressources distantes dans ce contexte.
+  -->
+  <style>
+    svg > g { display: none }
+    svg > g:target { display:block }
+
+    #cloud { fill: grey; }
+    #sun, #halfsun, #lightning { fill: gold; }
+
+    #rain {
+      fill: none;
+      stroke: #ACF;
+      stroke-width: 10px;
+      stroke-linecap: round;
+    }
+
+    #sun use, #halfsun use {
+      fill: none;
+      stroke: gold;
+      stroke-width: 5px;
+      stroke-linecap: round;
+      transform-origin: 50px 50px;
+    }
+
+    #sun use:nth-of-type(1)  { transform: rotate(15deg); }
+    #sun use:nth-of-type(2)  { transform: rotate(45deg); }
+    #sun use:nth-of-type(3)  { transform: rotate(75deg); }
+    #sun use:nth-of-type(4)  { transform: rotate(105deg); }
+    #sun use:nth-of-type(5)  { transform: rotate(135deg); }
+    #sun use:nth-of-type(6)  { transform: rotate(165deg); }
+    #sun use:nth-of-type(7)  { transform: rotate(195deg); }
+    #sun use:nth-of-type(8)  { transform: rotate(225deg); }
+    #sun use:nth-of-type(9)  { transform: rotate(255deg); }
+    #sun use:nth-of-type(10) { transform: rotate(285deg); }
+    #sun use:nth-of-type(11) { transform: rotate(315deg); }
+    #sun use:nth-of-type(12) { transform: rotate(345deg); }
+
+    #halfsun use:nth-of-type(1)  { transform: rotate(-25deg); }
+    #halfsun use:nth-of-type(2)  { transform: rotate(5deg); }
+    #halfsun use:nth-of-type(3)  { transform: rotate(35deg); }
+    #halfsun use:nth-of-type(4)  { transform: rotate(65deg); }
+    #halfsun use:nth-of-type(5)  { transform: rotate(95deg); }
+  </style>
+
+  <defs>
+    <path id="cloud" d="m20,70 60,0 a12,12 0,1,0 0,-25 a9,9 0,0,0 -15,-5 a25.5,25.5 0,0,0 -50,0 a15.5,15.5 0,0,0 5,30 z" />
+    <path id="beam" d="M50,15 50,25" />
+    <path id="rain" d="m20,85 10,-20 m5,20 10,-20 m5,20 10,-20 m5,20 10,-20" />
+    <path id="lightning" d="m45,70 -5,10 5,0 -5,10 15,-15 -5,0 5,-5z" />
+
+    <g id="sun">
+      <circle cx="50" cy="50" r="20" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+    </g>
+
+    <g id="halfsun">
+      <circle cx="50" cy="50" r="20" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+    </g>
+  </defs>
+
+  <g id="sunny">
+    <use xlink:href="#sun" />
+  </g>
+
+  <g id="mitigated">
+    <use xlink:href="#halfsun" x="12" y="-12" />
+    <use xlink:href="#cloud" />
+  </g>
+
+  <g id="cloudy">
+    <use xlink:href="#cloud" />
+  </g>
+
+  <g id="rainy">
+    <use xlink:href="#rain" />
+    <use xlink:href="#cloud" />
+  </g>
+
+  <g id="stormy">
+    <use xlink:href="#lightning" x="-15" />
+    <use xlink:href="#lightning" />
+    <use xlink:href="#lightning" x="15" />
+    <use xlink:href="#cloud" />
+  </g>
+</svg>
