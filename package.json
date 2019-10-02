@@ -1,0 +1,17 @@
+{
+  "name": "atelier-svg",
+  "version": "1.0.0",
+  "description": "Atelier présenté à Paris Web 2019, l'objectif est d'explorer comment créer du SVG à la main",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ws -c ./tools/lws.config.js"
+  },
+  "author": "Jérémie Patonnier <jeremie.patonnier@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "koa-compile-sass": "^1.0.4",
+    "local-web-server": "^3.0.7",
+    "markdown-it": "^10.0.0",
+    "node-sass": "^4.12.0"
+  }
+}
