@@ -1,0 +1,53 @@
+<svg viewBox="0 0 100 100" id="go"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <style>@import url(advance.css);</style>
+
+  <defs>
+    <radialGradient id="innerShadow">
+      <stop offset="80%" />
+      <stop offset="98%" />
+    </radialGradient>
+
+    <pattern id="heartPattern" width="15%" height="15%" viewBox="0 0 100 100">
+      <rect width="100%" height="100%" />
+      <path d="M50,90 Q10,60 10,30 A20,20 0,0,1 50,30 A20,20 0,0,1 90,30 Q90,60 50,90 Z" />
+    </pattern>
+
+    <linearGradient id="shinny" gradientUnits="userSpaceOnUse"
+      x1="20" y1="15" x2="30" y2="30">
+      <stop offset="5%" />
+      <stop offset="55%" />
+      <stop offset="95%" />
+    </linearGradient>
+
+    <filter id="darkGlow">
+      <feDropShadow stdDeviation="0.3" dx="0" dy="0" />
+      <feDropShadow stdDeviation="1.0" dx="0" dy="0" />
+      <feDropShadow stdDeviation="1.5" dx="0" dy="0" />
+    </filter>
+
+    <path id="txtPath" d="M90,50 A1,1 0,1,1 10,50 A1,1 0,1,1 90,50">
+      <set attributeName="class" to="inflate" begin="go.click" />
+    </path>
+  </defs>
+
+  <g id="circle">
+    <use xlink:href="#txtPath" class="bg" />
+    <use xlink:href="#txtPath" class="fg" />
+  </g>
+
+  <text id="season">
+    <set attributeName="class" to="reveal" begin="go.click+0.6s" />
+
+    <textPath startOffset="0%" xlink:href="#txtPath">
+      La météo de l'amour
+
+      <animate
+        attributeName="startOffset"
+        from="0%" to="50%" dur="0.5s"
+        begin="go.click+0.3s" fill="freeze" />
+    </textPath>
+  </text>
+</svg>

@@ -1,0 +1,54 @@
+@import url('../../../tools/reveal/lib/font/lobster/lobster.css');
+
+#innerShadow stop:nth-child(1) { stop-color: transparent; }
+#innerShadow stop:nth-child(2) { stop-color: black; }
+
+#heartPattern rect { fill: #333; }
+#heartPattern path { opacity: 0.3; }
+
+#shinny stop:nth-child(1) { stop-color: gold; }
+#shinny stop:nth-child(2) { stop-color: white; }
+#shinny stop:nth-child(3) { stop-color: gold; }
+
+#darkGlow feDropShadow:nth-child(1) { flood-color: red; }
+#darkGlow feDropShadow:nth-child(2) { flood-color: maroon; }
+#darkGlow feDropShadow:nth-child(3) { flood-color: black; }
+
+@keyframes inflate {
+  from { transform:  scale(0.0) translate(-40px, -40px); opacity:0; }
+  50%  { transform:  scale(0.5) translate( 30px,  30px); }
+  80%  { transform:  scale(1.1) translate( 18px,  18px); }
+  to   { transform:  scale(1.0) translate(  0px,   0px); opacity:1;  }
+}
+
+#txtPath { transform: scale(0); }
+#txtPath.inflate {
+  animation: inflate 500ms forwards;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+  to   { opacity: 1 }
+}
+
+.reveal {
+  animation: reveal 400ms forwards;
+}
+
+#season {
+  font: 10px "Lobster", fantasy;
+  opacity: 0;
+
+  fill: url(#shinny);
+  filter: url(#darkGlow);
+}
+
+#circle .fg {
+  fill: url(#innerShadow);
+  stroke: maroon;
+  stroke-width: 7px;
+}
+
+#circle .bg {
+  fill: url(#heartPattern);
+}
