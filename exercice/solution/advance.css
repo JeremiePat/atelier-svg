@@ -1,0 +1,50 @@
+#heart {
+  fill: maroon;
+
+  stroke: maroon;
+  stroke-linejoin: round;
+  stroke-width: 4.7px;
+
+  cursor: pointer;
+}
+
+#left {
+  clip-path: url(#breakLeft);
+
+  transform-origin: 50px 90px;
+  transform: rotate(0.5deg);
+}
+
+#right {
+  clip-path: url(#breakRight);
+
+  transform-origin: 50px 90px;
+  transform: rotate(-0.5deg);
+}
+
+#breakRight use {
+  transform-origin: 50px 50px;
+  transform: scale(-1);
+}
+
+@keyframes bump {
+  20% { transform: scale(1); }
+  35% { transform: scale(1.1); }
+  50% { transform: scale(1.1); }
+  65% { transform: scale(1); }
+}
+
+#heart.bump {
+  animation: bump 1s linear 0s 2;
+  transform-origin: 50px 50px;
+}
+
+.crack #left {
+  transform: rotate(-3deg);
+  transition: transform 250ms ease-out;
+}
+
+.crack #right {
+  transform: rotate(4deg);
+  transition: transform 250ms ease-out;
+}

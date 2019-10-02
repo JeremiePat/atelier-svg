@@ -1,0 +1,45 @@
+<svg viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <style>@import url('base.scss')</style>
+
+  <defs>
+    <path id="heartShape" d="M50,90 Q10,60 10,30 A20,20 0,0,1 50,30 A20,20 0,0,1 90,30 Q90,60 50,90 Z" />
+
+    <path id="crack" d="m0,0 50,0 -2.5,5 5,10 -5,10 5,10 -5,10 5,10 -5,10 5,10 -5,10 5,10 -5,10 2.5,5 -50,0 z" />
+
+    <clipPath id="breakLeft">
+      <use xlink:href="#crack" />
+    </clipPath>
+
+    <clipPath id="breakRight">
+      <use xlink:href="#crack" />
+    </clipPath>
+  </defs>
+
+  <g id="heart">
+    <use xlink:href="#heartShape" id="left" />
+    <use xlink:href="#heartShape" id="right" />
+  </g>
+
+
+  <!--
+    Pensez à supprimer/commenter la grille de repères
+    une fois que vous aurez finis de créer votre code
+  -->
+  <g id="grid">
+    <pattern id="gridSmall"
+      patternUnits="userSpaceOnUse" width="10" height="10">
+      <path d="M0,0 10,0 10,10 0,10 z" />
+    </pattern>
+
+    <pattern id="gridLarge"
+      patternUnits="userSpaceOnUse" width="100" height="100">
+      <path d="M50,0 50,100 M0,50 100,50" />
+    </pattern>
+
+    <rect width="100%" height="100%" fill="url(#gridSmall)" stroke="none" />
+    <rect width="100%" height="100%" fill="url(#gridLarge)" stroke="none" />
+  </g>
+</svg>

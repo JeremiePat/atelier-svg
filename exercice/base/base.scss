@@ -1,0 +1,31 @@
+@import 'scss/root';
+@import 'scss/grid';
+
+#heart {
+  fill: maroon;
+
+  stroke: maroon;
+  stroke-linejoin: round;
+  stroke-width: 4.7px;
+}
+
+#left {
+  clip-path: url(#breakLeft);
+
+  transform-origin: 50px 90px;
+  transform: rotate(-3deg);
+}
+
+#right {
+  clip-path: url(#breakRight);
+
+  transform-origin: 50px 90px;
+  transform: rotate(4deg);
+}
+
+#breakRight use {
+  transform-origin: 50px 50px;
+  transform: scale(-1); /* Racourcis pour scale(-1, -1) */
+}
+
+// Ecrivez vos styles ici
