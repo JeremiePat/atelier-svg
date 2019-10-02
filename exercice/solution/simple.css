@@ -1,0 +1,18 @@
+@import url('../../../tools/reveal/lib/font/lobster/lobster.css');
+
+#season {
+  font: 20px "Lobster", fantasy;
+  text-anchor: middle;
+
+  transform: skew(10deg,-20deg);
+  transform-origin: 50px 50px;
+
+  fill: url(#shinny);
+  filter: url(#darkGlow);
+}
+
+circle {
+  fill: url(#darkBackground);
+  stroke: maroon;
+  stroke-width: 7px;
+}
