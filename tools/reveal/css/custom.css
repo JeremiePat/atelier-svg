@@ -1,0 +1,30 @@
+@import url(../lib/font/fredericka-the-great/fredericka-the-great.css);
+@import url(../lib/font/lobster/lobster.css);
+@import url(../lib/font/staatliches/staatliches.css);
+@import url(../lib/font/source-sans-pro/source-sans-pro.css);
+@import url(../lib/font/source-code-pro/source-code-pro.css);
+body { background: radial-gradient(#444, #222); }
+
+.reveal { color: #EFEFEF; font-size: 2rem; font-family: 'Source Sans Pro', sans-serif; }
+
+.reveal h1 { font-size: 3em; font-family: 'Fredericka The Great', 'League Gothic', sans-serif; text-shadow: none; }
+
+.reveal h2 { font-size: 3em; }
+
+.reveal p { max-width: 60rem; margin: 1.5rem auto; }
+
+.reveal pre { font-size: 0.85em; font-family: "Source Code Pro", monospace; display: inline-block; width: auto; margin: 1.5rem 0; }
+
+.reveal pre code { padding: 1rem; max-height: calc(12*1.5*2rem); line-height: 1.5; font-family: inherit; }
+
+.reveal iframe { height: 45rem; width: 45rem; border: none; background: white; }
+
+.reveal section img { max-height: 45rem; background: white; }
+
+.reveal section[data-background-image], .reveal section[data-background-video] { background: rgba(0, 0, 0, 0.7); border-radius: 1rem; }
+
+.reveal .hljs[data-line-numbers]:not([data-line-numbers=""]) tr:not(.highlight-line) { opacity: 0.6; }
+
+.reveal .multicol { columns: 3 auto; column-gap: 5rem; }
+
+.reveal .slides > section, .reveal .slides > section > section { padding: 3rem 0; box-sizing: border-box; }

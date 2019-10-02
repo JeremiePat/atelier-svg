@@ -1,0 +1,85 @@
+@import '../lib/font/fredericka-the-great/fredericka-the-great.css';
+@import '../lib/font/lobster/lobster.css';
+@import '../lib/font/staatliches/staatliches.css';
+@import '../lib/font/source-sans-pro/source-sans-pro.css';
+@import '../lib/font/source-code-pro/source-code-pro.css';
+
+body {
+  background: radial-gradient(#444, #222);
+}
+
+.reveal {
+  color: #EFEFEF;
+  font: {
+    size: 2rem;
+    family: 'Source Sans Pro', sans-serif;
+  }
+
+  h1 {
+    font: {
+      size: 3em;
+      family: 'Fredericka The Great', 'League Gothic', sans-serif;
+    }
+
+    text-shadow: none;
+  }
+
+  h2 { font-size: 3em; }
+
+  p {
+    max-width: 60rem;
+    margin: 1.5rem auto;
+  }
+
+  pre {
+    font: {
+      size: 0.85em;
+      family: "Source Code Pro", monospace;
+    }
+    display: inline-block;
+    width: auto;
+    margin: 1.5rem 0;
+
+    code {
+      padding: 1rem;
+      max-height: calc(12*1.5*2rem);
+      line-height: 1.5;
+      font-family: inherit;
+    }
+  }
+
+  iframe {
+    height: 45rem;
+    width:45rem;
+    border:none;
+    background: white;
+  }
+
+  section {
+    img {
+      max-height: 45rem;
+      background: white;
+    }
+
+    &[data-background-image],
+    &[data-background-video] {
+      background: rgba(0,0,0,0.7);
+      border-radius: 1rem;
+    }
+  }
+
+  .hljs[data-line-numbers]:not([data-line-numbers=""]) tr:not(.highlight-line) {
+    opacity: 0.6;
+  }
+
+  .multicol {
+    columns: 3 auto;
+    column-gap: 5rem;
+  }
+
+  .slides > section,
+  .slides > section > section {
+    padding: 3rem 0;
+    box-sizing: border-box;
+  }
+}
