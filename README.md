@@ -1,24 +1,21 @@
 # SVG à la main, toi aussi tu peux le faire
 
-Atelier présenté à Paris Web 2019, l'objectif est d'explorer comment créer du
-SVG à la main.
+Atelier présenté à Paris Web 2019, l'objectif est d'explorer comment créer du SVG à la main.
 
 
 ## Démarrage
 
-Ce dépôt GIT contient tous les exercices pour arriver à produire cette image :
+Ce dépôt GIT contient tous les exercices pour arriver à produire [cette image interactive](slides/img/final.svg) :
 
-<iframe src="slides/img/final.svg"></iframe>
+![](slides/img/final.svg)
 
-Vous voyez actuellement le résultat final auquel vous allez arriver. Pour
-suivre les exercices étape par étape commencez par cloner ce dépôt :
+Vous voyez actuellement un petite partie du résultat final auquel vous allez arriver. Pour suivre les exercices étape par étape commencez par cloner ce dépôt :
 
 ```bash
 git clone https://github.com/JeremiePat/atelier-svg.git
 ```
 
-Ensuite, accéder à chaque étape pour voir ses instructions et comment le
-code évolue :
+Ensuite, accéder à chaque étape pour voir ses instructions et comment le code évolue :
 
 ```bash
 # Démarrer un nouvel exercice
@@ -28,8 +25,7 @@ git checkout ex.001
 git checkout ex.001.solution
 ```
 
-Chaque étape correspond à un tag au format `ex.XXX` ou XXX est le numéro de
-l'étape à laquelle vous souhaitez accéder (préfixé par `0` autant que nécessaire).
+Chaque étape correspond à un tag au format `ex.XXX` ou XXX est le numéro de l'étape à laquelle vous souhaitez accéder (préfixé par `0` autant que nécessaire).
 
 Tout ce passe ensuite dans le dossier `exercice`. Vous y trouverez :
 
