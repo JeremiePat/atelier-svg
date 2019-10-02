@@ -1,0 +1,33 @@
+<svg viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <style>@import url('base.scss')</style>
+
+  <defs>
+    <!-- Créez vos éléments graphiques réutilisable ici -->
+  </defs>
+
+
+  <!-- Composez vos sprites ici -->
+
+
+  <!--
+    Pensez à supprimer/commenter la grille de repères
+    une fois que vous aurez finis de créer vos sprites
+  -->
+  <g id="grid">
+    <pattern id="gridSmall"
+      patternUnits="userSpaceOnUse" width="10" height="10">
+      <path d="M0,0 10,0 10,10 0,10 z" />
+    </pattern>
+
+    <pattern id="gridLarge"
+      patternUnits="userSpaceOnUse" width="100" height="100">
+      <path d="M50,0 50,100 M0,50 100,50" />
+    </pattern>
+
+    <rect width="100%" height="100%" fill="url(#gridSmall)" stroke="none" />
+    <rect width="100%" height="100%" fill="url(#gridLarge)" stroke="none" />
+  </g>
+</svg>

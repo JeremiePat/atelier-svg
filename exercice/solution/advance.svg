@@ -1,0 +1,104 @@
+<svg viewBox="0 0 300 200"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <style>@import url('advance.css')</style>
+
+  <view id="sunny"     viewBox="  0,   0, 100, 100" />
+  <view id="mitigated" viewBox="100,   0, 100, 100" />
+  <view id="cloudy"    viewBox="200,   0, 100, 100" />
+  <view id="rainy"     viewBox="  0, 100, 100, 100" />
+  <view id="stormy"    viewBox="100, 100, 100, 100" />
+
+  <defs>
+    <path id="cloud" d="
+      m20,70 60,0
+      a12,12,0 1,0 0,-25
+      a9,9,0 0,0 -15,-5
+      a25.5,25.5 0 0,0 -50,0
+      a15.5,15.5 0 0,0 5,30 z" />
+
+    <path id="beam" d="M50,15 50,25" />
+
+    <g id="sun">
+      <circle cx="50" cy="50" r="20" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+    </g>
+
+    <g id="halfsun">
+      <circle cx="50" cy="50" r="20" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+      <use xlink:href="#beam" />
+    </g>
+
+    <path id="rain" d="
+      m20,85 10,-20
+      m5,20 10,-20
+      m5,20 10,-20
+      m5,20 10,-20" />
+
+    <path id="lightning" d="m45,70 -5,10 5,0 -5,10 15,-15 -5,0 5,-5z" />
+  </defs>
+
+  <!-- advance.svg#sunny -->
+  <!-- advance.svg#svgView(viewBox(0, 0, 100, 100)) -->
+  <svg viewBox="0 0 100 100"
+    x="0" y="0" width="100" height="100">
+    <use xlink:href="#sun" />
+  </svg>
+
+  <!-- advance.svg#mitigated -->
+  <!-- advance.svg#svgView(viewBox(100, 0, 100, 100)) -->
+  <svg viewBox="0 0 100 100"
+    x="100" y="0" width="100" height="100">
+    <use xlink:href="#halfsun" x="12" y="-12" />
+    <use xlink:href="#cloud" />
+  </svg>
+
+  <!-- advance.svg#cloudy -->
+  <!-- advance.svg#svgView(viewBox(200, 0, 100, 100)) -->
+  <svg viewBox="0 0 100 100"
+    x="200" y="0" width="100" height="100">
+    <use xlink:href="#cloud" />
+  </svg>
+
+  <!-- advance.svg#rainy -->
+  <!-- advance.svg#svgView(viewBox(0, 100, 100, 100)) -->
+  <svg viewBox="0 0 100 100"
+    x="0" y="100" width="100" height="100">
+    <use xlink:href="#rain" />
+    <!--
+      On aurai aussi pu réutiliser #beam, mais c'est
+      plus verbeux et pas plus simple à utiliser
+    -->
+    <!-- <use xlink:href="#beam" /> -->
+    <!-- <use xlink:href="#beam" /> -->
+    <!-- <use xlink:href="#beam" /> -->
+    <!-- <use xlink:href="#beam" /> -->
+    <use xlink:href="#cloud" />
+  </svg>
+
+  <!-- advance.svg#stormy -->
+  <!-- advance.svg#svgView(viewBox(100, 100, 100, 100)) -->
+  <svg viewBox="0 0 100 100"
+    x="100" y="100" width="100" height="100">
+    <use xlink:href="#lightning" x="-15" />
+    <use xlink:href="#lightning" />
+    <use xlink:href="#lightning" x="15" />
+    <use xlink:href="#cloud" />
+  </svg>
+</svg>
