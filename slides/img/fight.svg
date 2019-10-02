@@ -1,0 +1,84 @@
+<svg viewBox="0 0 100 100" id="go"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <use xlink:href="grid.svg#grid" />
+
+  <style>
+    @import url('../../../tools/reveal/lib/font/lobster/lobster.css');
+
+    @keyframes inflate {
+      from { cx: 10px; cy: 10px; r: 0; opacity:0; }
+      50%  { cx: 80px; cy: 80px; }
+      80%  { r:  45px; }
+      to   { cx: 50px; cy: 50px; r: 40px; opacity:1;  }
+    }
+
+    .inflate {
+      animation: inflate 500ms forwards;
+    }
+
+    @keyframes reveal {
+      from { opacity: 0 }
+      to   { opacity: 1 }
+    }
+
+    .reveal {
+      animation: reveal 400ms forwards;
+    }
+
+    #season {
+      font: 10px "Lobster", fantasy;
+      opacity: 0;
+
+      fill: url(#shinny);
+      filter: url(#darkGlow);
+    }
+
+    circle {
+      fill: url(#darkBackground);
+      stroke: maroon;
+      stroke-width: 7px;
+    }
+  </style>
+
+  <defs>
+    <radialGradient id="darkBackground">
+      <stop offset="80%"  stop-color="#333" />
+      <stop offset="98%" stop-color="#000" />
+    </radialGradient>
+
+    <linearGradient id="shinny"
+      x1="20" y1="15" x2="30" y2="30"
+      gradientUnits="userSpaceOnUse">
+      <stop offset="5%"  stop-color="gold" />
+      <stop offset="55%" stop-color="white" />
+      <stop offset="95%" stop-color="gold" />
+    </linearGradient>
+
+    <filter id="darkGlow">
+      <feDropShadow stdDeviation="0.3" dx="0" dy="0" flood-color="red" />
+      <feDropShadow stdDeviation="1.0" dx="0" dy="0" flood-color="maroon" />
+      <feDropShadow stdDeviation="1.5" dx="0" dy="0" flood-color="black" />
+    </filter>
+
+    <path id="txtPath" d="M90,50 A1,1 0,1,1 10,50 A1,1 0,1,1 90,50" />
+  </defs>
+
+  <circle cx="50" cy="50" r="0">
+    <set attributeName="class" to="inflate" begin="go.click" />
+  </circle>
+
+  <text id="season">
+    <set attributeName="class" to="reveal" begin="go.click+0.6s" />
+
+    <textPath startOffset="0%" xlink:href="#txtPath">
+      La météo de l'amour
+
+      <animate
+        attributeName="startOffset"
+        from="0%" to="50%" dur="0.5s"
+        begin="go.click+0.3s" fill="freeze" />
+    </textPath>
+  </text>
+</svg>

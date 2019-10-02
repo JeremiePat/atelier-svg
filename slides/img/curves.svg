@@ -1,0 +1,112 @@
+<svg viewBox="0 0 200 100"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <style>
+  .grid {
+    fill: none;
+    stroke: rgba(0,0,0,0.3);
+    stroke-width: 0.1px;
+  }
+
+  .grid .fat {
+    stroke-width: 0.4px;
+  }
+
+  #quadratic, #cubic {
+    fill: none;
+    stroke: black;
+    stroke-width: 10px;
+    stroke-linecap: round;
+  }
+
+  #cubic {
+    transform: translateX(100px);
+  }
+
+  text {
+    font: 8px sans-serif;
+  }
+
+  .curve {
+    fill: none;
+    stroke: red;
+    stroke-width: .5px;
+  }
+
+  .curve circle {
+    fill: red;
+  }
+
+  .dotted {
+    stroke-dasharray: 1;
+  }
+  </style>
+
+  <g class="grid">
+    <path class="fat" d="
+      M50,0 50,100 M100,0 100,100 M150,0 150,100 M0,50 200,50
+    " />
+    <path d="
+      M0,0 h200
+      m-200,10 h200
+      m-200,10 h200
+      m-200,10 h200
+      m-200,10 h200
+      m-200,10 h200
+      m-200,10 h200
+      m-200,10 h200
+      m-200,10 h200
+      m-200,10 h200
+      m-200,10 h200
+      M0,0 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100" />
+  </g>
+
+  <path id="quadratic" d="
+    M10,10 Q10,90 90,90
+  " />
+  <text x="30" y="40">Quadratic</text>
+
+  <path id="cubic" d="
+    M10,10 C10,65 35,90 90,90
+  " />
+  <text x="130" y="40">Cubic</text>
+
+  <g class="curve">
+    <path d="
+      M10,10 Q10,90 90,90
+      M110,10 C110,65 135,90 190,90
+    " />
+
+    <circle cx="10" cy="10" r="1.5" />
+    <circle cx="10" cy="90" r="1.5" />
+    <circle cx="90" cy="90" r="1.5" />
+
+    <circle cx="110" cy="10" r="1.5" />
+    <circle cx="110" cy="65" r="1.5" />
+    <circle cx="135" cy="90" r="1.5" />
+    <circle cx="190" cy="90" r="1.5" />
+
+    <path class="dotted" d="M10,10 10,90 90,90 M110,10 110,65 M135,90 190,90" />
+  </g>
+</svg>

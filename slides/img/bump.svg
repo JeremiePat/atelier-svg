@@ -1,0 +1,80 @@
+<svg viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <use xlink:href="grid.svg#grid" />
+
+  <style>
+    #heart {
+      fill: maroon;
+
+      stroke: maroon;
+      stroke-linejoin: round;
+      stroke-width: 4.7px;
+
+      cursor: pointer;
+    }
+
+    #left {
+      clip-path: url(#breakLeft);
+
+      transform-origin: 50px 90px;
+      transform: rotate(0.5deg);
+    }
+
+    #right {
+      clip-path: url(#breakRight);
+
+      transform-origin: 50px 90px;
+      transform: rotate(-0.5deg);
+    }
+
+    #breakRight use {
+      transform-origin: 50px 50px;
+      transform: scale(-1);
+    }
+
+    @keyframes bump {
+      20% { transform: scale(1); }
+      35% { transform: scale(1.1); }
+      50% { transform: scale(1.1); }
+      65% { transform: scale(1); }
+    }
+
+    #heart.bump {
+      animation: bump 1s linear 0s 2;
+      transform-origin: 50px 50px;
+    }
+
+    .crack #left {
+      transform: rotate(-3deg);
+      transition: transform 250ms ease-out;
+    }
+
+    .crack #right {
+      transform: rotate(4deg);
+      transition: transform 250ms ease-out;
+    }
+  </style>
+
+  <defs>
+    <path id="heartShape" d="M50,90 Q10,60 10,30 A20,20 0,0,1 50,30 A20,20 0,0,1 90,30 Q90,60 50,90 Z" />
+    <path id="crack" d="m0,0 50,0 -2.5,5 5,10 -5,10 5,10 -5,10 5,10 -5,10 5,10 -5,10 5,10 -5,10 2.5,5 -50,0 z" />
+
+    <clipPath id="breakLeft">
+      <use xlink:href="#crack" />
+    </clipPath>
+
+    <clipPath id="breakRight">
+      <use xlink:href="#crack" />
+    </clipPath>
+  </defs>
+
+  <g id="heart">
+    <use xlink:href="#heartShape" id="left" />
+    <use xlink:href="#heartShape" id="right" />
+
+    <set attributeName="class" begin="heart.click" to="bump" dur="1.7s" id="start" />
+    <set attributeName="class" begin="start.end"   to="crack" />
+  </g>
+</svg>

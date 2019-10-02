@@ -1,0 +1,125 @@
+<svg viewBox="0 0 200 100"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <use xlink:href="grid.svg#grid" />
+
+  <style>
+    :root {
+      --num-rays: 11;
+      --color-1: white;
+      --color-2: maroon;
+      --fade: .6;
+    }
+
+    #sky:target ~ #rays {
+      --num-rays: 9;
+      --color-1: hsl(180deg, 50%, 80%);
+      --color-2: transparent;
+      --fade: .75;
+    }
+
+    #nuke:target ~ #rays {
+      --num-rays: 3;
+      --color-1: black;
+      --color-2: gold;
+      --fade: 0;
+    }
+
+    #evil:target ~ #rays {
+      --num-rays: 15;
+      --color-1: red;
+      --color-2: black;
+      --fade: 1;
+    }
+
+    #greyScale stop { stop-color: white; }
+    #greyScale stop:nth-of-type(2) { stop-opacity: calc(1 - var(--fade, .8)); }
+
+    #ray {
+      mask: url(#triangle);
+    }
+
+    #triangle .right {
+      transform-origin: 50% 50%;
+      transform: rotate(calc(var(--opening)));
+    }
+
+    #rays {
+      --opening: calc(180deg / var(--num-rays, 1));
+      mask: url(#fade);
+    }
+
+    #rays use {
+      --rotation: calc(2 * (var(--position, 1) - 1) * var(--opening) - var(--opening) / 2) ;
+
+      fill: var(--color-1);
+
+      transform-origin: 50% 50%;
+      transform: rotate(var(--rotation));
+    }
+
+    #rays > rect {
+      fill: var(--color-2, black);
+    }
+
+    #rays use:nth-of-type(1) { --position: 1; }
+    #rays use:nth-of-type(2) { --position: 2; }
+    #rays use:nth-of-type(3) { --position: 3; }
+    #rays use:nth-of-type(4) { --position: 4; }
+    #rays use:nth-of-type(5) { --position: 5; }
+    #rays use:nth-of-type(6) { --position: 6; }
+    #rays use:nth-of-type(7) { --position: 7; }
+    #rays use:nth-of-type(8) { --position: 8; }
+    #rays use:nth-of-type(9) { --position: 9; }
+    #rays use:nth-of-type(10) { --position: 10; }
+    #rays use:nth-of-type(11) { --position: 11; }
+    #rays use:nth-of-type(12) { --position: 12; }
+    #rays use:nth-of-type(13) { --position: 13; }
+    #rays use:nth-of-type(14) { --position: 14; }
+    #rays use:nth-of-type(15) { --position: 15; }
+  </style>
+
+  <g id="sky"></g>
+  <g id="nuke"></g>
+  <g id="evil"></g>
+  <g id="rays">
+    <defs>
+      <rect id="ray" x="-100%" y="-100%" width="300%" height="300%" />
+
+      <radialGradient id="greyScale">
+        <stop offset="33%"  />
+        <stop offset="100%" />
+      </radialGradient>
+
+      <mask id="fade">
+        <rect width="100%" height="100%" fill="url(#greyScale)" />
+      </mask>
+
+      <mask id="triangle" >
+        <rect x="-500%" y="-500%" width="1100%" height="1100%" fill="white" />
+
+        <rect class="left"  width="1550%" height="2100%" x="-1500%" y="-1000%"/>
+        <rect class="right" width="1550%" height="2100%" x="50%"   y="-1000%"/>
+      </mask>
+    </defs>
+
+    <rect width="100%" height="100%" />
+
+    <use xlink:href="#ray" />
+    <use xlink:href="#ray" />
+    <use xlink:href="#ray" />
+    <use xlink:href="#ray" />
+    <use xlink:href="#ray" />
+    <use xlink:href="#ray" />
+    <use xlink:href="#ray" />
+    <use xlink:href="#ray" />
+    <use xlink:href="#ray" />
+    <use xlink:href="#ray" />
+    <use xlink:href="#ray" />
+    <use xlink:href="#ray" />
+    <use xlink:href="#ray" />
+    <use xlink:href="#ray" />
+    <use xlink:href="#ray" />
+  </g>
+</svg>

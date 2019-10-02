@@ -1,0 +1,96 @@
+<svg viewBox="0 0 200 100"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <style>
+  svg:root {
+    background: white;
+  }
+
+  .grid {
+    fill: none;
+    stroke: rgba(0,0,0,0.3);
+    stroke-width: 0.1px;
+  }
+
+  .grid .fat {
+    stroke-width: 0.4px;
+  }
+
+  .arc {
+    fill: none;
+    stroke: black;
+    stroke-width: 1px;
+    stroke-linecap: round;
+  }
+
+  .arc:nth-of-type(1) { stroke: green; }
+  .arc:nth-of-type(2) { stroke: green; opacity: 0.5 }
+  .arc:nth-of-type(3) { stroke: blue; }
+  .arc:nth-of-type(4) { stroke: blue; opacity: 0.5 }
+
+  text {
+    font: 8px sans-serif;
+  }
+
+  .curve {
+    fill: none;
+    stroke: red;
+    stroke-width: .5px;
+  }
+
+  .curve circle {
+    fill: red;
+  }
+  </style>
+
+  <g class="grid">
+    <path class="fat" d="
+      M50,0 50,100 M100,0 100,100 M150,0 150,100 M0,50 200,50
+    " />
+    <path d="
+      M0,0 h200
+      m-200,10 h200
+      m-200,10 h200
+      m-200,10 h200
+      m-200,10 h200
+      m-200,10 h200
+      m-200,10 h200
+      m-200,10 h200
+      m-200,10 h200
+      m-200,10 h200
+      m-200,10 h200
+      M0,0 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100
+      m10,-100 v100" />
+  </g>
+
+  <path class="arc" d="M100,30 A40,40,0 0,1 100,70" /><text x="110" y="50">0,1</text>
+  <path class="arc" d="M100,30 A40,40,0 1,1 100,70" /><text x="160" y="50">1,1</text>
+  <path class="arc" d="M100,30 A40,40,0 0,0 100,70" /><text x="80" y="50">0,0</text>
+  <path class="arc" d="M100,30 A40,40,0 1,0 100,70" /><text x="30" y="50">1,0</text>
+
+  <g class="curve">
+    <circle class="dot" cx="100" cy="30" r="1.5" />
+    <circle class="dot" cx="100" cy="70" r="1.5" />
+
+  </g>
+</svg>
