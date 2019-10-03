@@ -5,9 +5,9 @@ Atelier présenté à Paris Web 2019, l'objectif est d'explorer comment créer d
 
 ## Démarrage
 
-Ce dépôt GIT contient tous les exercices pour arriver à produire [cette image interactive](slides/img/final.svg) :
+Ce dépôt GIT contient tous les exercices pour arriver à produire cette image interactive :
 
-![](slides/img/final.svg)
+![](slides/img/weather-of-love.png)
 
 Vous voyez actuellement un petite partie du résultat final auquel vous allez arriver. Pour suivre les exercices étape par étape commencez par cloner ce dépôt :
 
