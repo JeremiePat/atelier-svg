@@ -50,7 +50,7 @@ Vous n'aurez plus qu'à écrire votre code dans le dossier [`exercice/code`](exe
 6. [Au cœur de la tempête](#/6)
 7. [Travail d'équipe](#/7)
 8. [Vas-y Johnny, fait-moi mal !](#/8)
-9. [Tous ensemble ❤️](#/9)
+9. [Tout ensemble ❤️](#/9)
 
 <!-- .element: class="multicol" -->
 
