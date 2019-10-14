@@ -13,11 +13,11 @@ Pouvoir matérialiser une grille et des repères qui ne sont finalement que des 
 <path d="M0,0 L100,100 H0 z" />
 ```
 
-Chaque commande se matérialise par une lettre suivie de nombres séparés par des espaces ou des virgules. Les lettres sont soit en majuscule soit en minuscule. Une lettre majuscule indique que les nombres qui suivent représenteront des coordonnées absolues, là ou avec une lettre minuscule ils représenteront des coordonnées relatives au dernier point de la commande précédente.
+Chaque commande se matérialise par une lettre suivie de nombres séparés par des espaces ou des virgules. Les lettres sont soit en majuscule soit en minuscule. Une lettre majuscule indique que les nombres qui suivent représenteront des coordonnées absolues, là où avec une lettre minuscule ils représenteront des coordonnées relatives au dernier point de la commande précédente.
 
 Pour créer des grilles et des repères, les commandes qui nous intéressent sont :
 
- - `M x,y` : Déplace le point de début du tracé aux coordonnées x,y
+ - `M x,y` : déplace le point de début du tracé aux coordonnées x,y
  - `L x,y` : trace une ligne jusque au point de coordonnées x,y
  - `V y`   : trace une ligne verticale jusque au point de coordonnée y (x étant implicite)
  - `H x`   : trace une ligne horizontale jusque au point de coordonnée x (y étant implicite)
@@ -30,9 +30,9 @@ Par défaut les chemins sont remplis avec la couleur noire via la propriété [`
 ## Objectif de l'exercice
 
  - créer un fichier SVG avec une `viewBox` de 100x100
- - utilisez une balise `<path>` pour créer deux repères qui scinde la `viewBox` en deux verticalement et horizontalement
+ - utilisez une balise `<path>` pour créer deux repères qui scindent la `viewBox` en deux, verticalement et horizontalement
  - utiliser une autre balise `<path>` pour créer une grille de cellule de 10x10
- - appliquez un style différent a chacune de vos grilles pour pouvoir les distinguer
+ - appliquez un style différent à chacune de vos grilles pour pouvoir les distinguer
 
 <details>
   <summary>le répertoire `exercice/code`</summary>
